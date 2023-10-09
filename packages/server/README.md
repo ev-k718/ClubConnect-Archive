@@ -1,40 +1,13 @@
-# Hopkins Club Connect (HOPCC)
+# README for the Backend
 
-HOPCC (Hopkins Club Connect) - An application management system for Hopkins clubs. Our app will allow clubs to clearly show their application timelines, required materials, and important information about their process. The app will also have the capability to fill out applications directly inside the app- which is customizable by the club. This will create a centralized place for students to see all of these application timelines in one place, and apply on a more unified platform. Applicants can also create an account and a profile so they don't have to fill out the same information for multiple clubs.
-
-
-## Installing / Getting started
-
-To get the app up & running on your local computer follow these instructions:
-
-### Setting up the backend
-1. Reference the .env.example in packages/server for what your env should look like (make sure your database ends with: hopcc-dev)
-1. Make sure your database ends in hopcc-dev
-1. Make sure your NODE_ENV is `development`
-1. Make sure you have the Docker application installed (**NOT** the dependency) and running
-1. Run `yarn dev` to start the express server
-1. Run `yarn prisma:dev` to start up the db
-
-### Setting up the frontend
-
-1. Run `yarn dev`
-1. Make sure your .env is populated according to .env.example in the packages/client folder
-
-
-## Developing
-
-Detailed and step-by-step documentation for setting up local development. 
-
-### Setting up backend
+## Setting up for the first time:
 
 1. Reference the .env.example for what your env should look like
-1. Make sure your database ends in hopcc-dev
-1. Make sure your NODE_ENV is dev
 1. Make sure you have the Docker application(google docker download if you don't have it) installed (**NOT** the dependency) and running
 1. Run `yarn dev` to start the express server
 1. Run `yarn prisma:dev` to start up the db
 
-#### package.json commands:
+## package.json commands:
 
 > Update this file when commands change
 - `start` : runs the directory you are using node
@@ -55,16 +28,8 @@ Detailed and step-by-step documentation for setting up local development.
 - `prisma:test` : Will seed the data with testing data using your `.env.test` file and the test seed data. **NOTE: This command should not really be used as it is called by `test`**
 - `prisma:test:studio` : Similiar to `prisma:dev:studio` but for tests
 
-#### Things to do if you update the db schema:
+## Things to do if you update the db schema:
 
 1. Uncomment the lines in the prisma.schema that talk about generating an ERD
 1. Run `yarn prisma:dev`
-1. Comment out the lines that you uncommented.
-
-
-## Testing
-
-- To run backend tests, run `yarn prisma:test`
-- Make sure that in your .env.test file, the database ends with hopcc-test and your NODE_ENV is test
-
- 
+1. Comment out the lines that you uncommented

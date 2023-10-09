@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "proj-hopcc",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "client:dev": "yarn workspace client dev",
+    "server:dev": "yarn workspace server dev",
+    "dev": "concurrently --kill-others-on-fail \"yarn server:dev\"  \"yarn client:dev\"",
+    "client": "yarn workspace client start",
+    "server": "yarn workspace server start",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
